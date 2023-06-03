@@ -54,4 +54,4 @@ class Square:
         """Prints the square with '#'
         """
         print(("#" * self.__size + "\n") * self.__size,
-                end="" if self.__size else "\n")
+              end="" if self.__size else "\n")
