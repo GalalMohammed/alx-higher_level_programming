@@ -9,6 +9,7 @@ Example:
 
         my_square = Square(5)
         print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+        my_square.my_print()
 
 """
 
