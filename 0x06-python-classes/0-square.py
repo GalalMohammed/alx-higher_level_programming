@@ -3,6 +3,7 @@
 """Class Square Docstring.
 
 This module defines an empty class Square.
+
 Example:
     You can define a square::
 
