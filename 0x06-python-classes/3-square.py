@@ -13,7 +13,7 @@ Example:
 """
 
 
-class Square:
+class Square(object):
     """A class defines a square.
 
     """
