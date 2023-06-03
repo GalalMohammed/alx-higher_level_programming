@@ -16,6 +16,7 @@ class Square:
     """A class defines a square.
 
     """
+
     def __init__(self, size):
         """__init__ method.
 
