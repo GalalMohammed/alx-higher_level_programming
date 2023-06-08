@@ -43,7 +43,7 @@ Non-Strings
 	Traceback (most recent call last):
             ...
         TypeError: last_name must be a string
-	>>> say_my_name(None)
+	>>> say_my_name()
 	Traceback (most recent call last):
             ...
-        TypeError: first_name must be a string
+        TypeError: say_my_name() missing required argument 'first_name' (pos 1)
