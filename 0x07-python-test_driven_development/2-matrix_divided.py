@@ -14,6 +14,7 @@ Example:
     [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 """
 
+
 def matrix_divided(matrix, div):
     """divides all elements of a matrix.
 
@@ -22,12 +23,16 @@ def matrix_divided(matrix, div):
 
     """
     err_msg = "matrix must be a matrix (list of lists) of integers/floats"
-    if not (isinstance(matrix, list) and isinstance(matrix[0], list) and
-       type(matrix[0][0]) in [int, float]):
+    if not isinstance(matrix, list):
         raise TypeError(err_msg)
-    for row in matrix[1:]:
+    for row in matrix:
         if len(row) != len(matrix[0]):
             raise TypeError("Each row of the matrix must have the same size")
+        if not isinstance(row, list):
+            raise TypeError(err_msg)
+        for i in row:
+            if not type(i) in [int, float]:
+                raise TypeError(err_msg)
     if not type(div) in [int, float]:
         raise TypeError("div must be a number")
     if not div:

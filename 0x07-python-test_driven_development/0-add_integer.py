@@ -9,6 +9,7 @@ Example:
     3
 """
 
+
 def add_integer(a, b=98):
     """adds 2 ints.
 
