@@ -8,9 +8,9 @@ This library is very simple, since it only has one function
 called ``matrix_divided()``.
 
 Using ``matrix_divided``
---------------------------
+------------------------
 
-First import ``matrix_divided`` from the ``2-matrix_divided.py`` module:
+First import ``matrix_divided`` from the ``2-matrix_divided`` module:
 
 	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
