@@ -16,7 +16,16 @@ Example:
 
 
 def say_my_name(first_name, last_name=""):
-    """prints My name is <first name> <last name>"""
+    """prints My name is <first name> <last name>
+
+    Args:
+        first_name: a string.
+        last_name (optional): a string. Defaults to "".
+
+    Raises:
+        TypeError: if first_name or last_name aren't strings.
+
+    """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):

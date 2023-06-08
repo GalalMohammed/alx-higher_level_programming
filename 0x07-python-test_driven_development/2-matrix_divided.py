@@ -18,8 +18,17 @@ Example:
 def matrix_divided(matrix, div):
     """divides all elements of a matrix.
 
+    Args:
+        matrix: list of lists of numbers
+        div: number.
+
     Returns:
         a new matrix.
+
+    Raises:
+        TypeError: if matris is not a list of lists of numbers, has different
+            rows lengths, or div isn't a number.
+        ZeroDivisionError: if div equals zero.
 
     """
     err_msg = "matrix must be a matrix (list of lists) of integers/floats"

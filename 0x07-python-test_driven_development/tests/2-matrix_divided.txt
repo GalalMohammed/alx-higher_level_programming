@@ -65,6 +65,10 @@ It also works with floating-point values.
 	Traceback (most recent call last):
             ...
         TypeError: Each row of the matrix must have the same size
+	>>> matrix_divided([[1]], 0)
+	Traceback (most recent call last):
+            ...
+        ZeroDivisionError: division by zero
 
 Non-Numbers
 ===========
@@ -79,7 +83,3 @@ Non-Numbers
 	Traceback (most recent call last):
             ...
         TypeError: div must be a number
-	>>> matrix_divided([[1]], 0)
-	Traceback (most recent call last):
-            ...
-        ZeroDivisionError: division by zero

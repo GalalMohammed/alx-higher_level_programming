@@ -39,6 +39,14 @@ It also works with floating-point values.
     98
     >>> add_integer(100.5, 1)
     101
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
 
 Non-Numbers
 ===========
@@ -57,11 +65,3 @@ Non-Numbers
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
-    >>> add_integer(float('inf'))
-    Traceback (most recent call last):
-        ...
-    OverflowError: cannot convert float infinity to integer
-    >>> add_integer(float('nan'))
-    Traceback (most recent call last):
-        ...
-    ValueError: cannot convert float NaN to integer

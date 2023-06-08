@@ -13,8 +13,15 @@ Example:
 def add_integer(a, b=98):
     """adds 2 ints.
 
+    Args:
+        a: The first number.
+        b(optional): The second number. Defaults to 98.
+
     Retunrs:
         The addition of int of a and int of b.
+
+    Raises:
+        TypeError: if a or b not numbers.
 
     >>> add_integer(100, -2)
     98
