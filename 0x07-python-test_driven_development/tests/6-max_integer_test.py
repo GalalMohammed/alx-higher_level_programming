@@ -10,7 +10,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def setUp(self):
         self.list1 = [1, 2, 3, 4]
-        self.list2 = [1, 3, 4, 2]
+        self.list2 = [1, 4, 2]
         self.list3 = [4, 3, 2, 1]
         self.list4 = [-1, -2, -3, -4]
         self.list5 = [-1, 2, 3, 4]
