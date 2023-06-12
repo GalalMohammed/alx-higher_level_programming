@@ -81,7 +81,7 @@ class Rectangle(object):
 
         """
         if self.__height and self.__width:
-            return ("#" * self.__width + "\n") * (self.__height - 1)
+            return ("#" * self.__width + "\n") * (self.__height - 1)\
                    + "#" * self.__width
         else:
             return ""
