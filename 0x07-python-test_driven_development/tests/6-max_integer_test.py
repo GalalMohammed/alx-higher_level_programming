@@ -10,12 +10,12 @@ class TestMaxInteger(unittest.TestCase):
 
     def setUp(self):
         self.list1 = [1, 2, 3, 4]
-        self.list2 = [1, 3, 4, 2]
+        self.list2 = [1, 4, 2]
         self.list3 = [4, 3, 2, 1]
         self.list4 = [-1, -2, -3, -4]
         self.list5 = [-1, 2, 3, 4]
         self.list6 = []
-        self.list7 = [0]
+        self.list7 = [4]
 
 
     def test_sorted_list_of_int(self):
@@ -43,7 +43,7 @@ class TestMaxInteger(unittest.TestCase):
 
 
     def test_list_of_one_element(self):
-        self.assertEqual(max_integer(self.list7), 0)
+        self.assertEqual(max_integer(self.list7), 4)
 
 
 if __name__ == '__main__':
