@@ -81,6 +81,10 @@ class Rectangle(object):
     def bigger_or_equal(rect_1, rect_2):
         """Returns the biggest rectangle based on the area.
 
+        Args:
+            rect_1 (Rectangle): first rectangle.
+            rect_2 (Rectangle): second rectangle.
+
         Returns:
             biggest rectangle.
 
