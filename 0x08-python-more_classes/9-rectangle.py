@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-This module defines s simple rectangle class.
+This module defines simple rectangle class.
 
 Example:
     You can define a rectangle::
