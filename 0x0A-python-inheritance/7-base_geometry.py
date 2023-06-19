@@ -11,7 +11,7 @@ Example:
 
 class BaseGeometry(object):
     """class defines a BaseGeometry."""
-    
+
     def area(self):
         """raises an Exception.
 
@@ -33,7 +33,7 @@ class BaseGeometry(object):
             ValueError: if value <= 0.
 
         """
-        if not isinstance(value, int):
+        if not type(name) in [int]:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be greater than 0")

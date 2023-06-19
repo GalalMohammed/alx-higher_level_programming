@@ -1,11 +1,8 @@
 # 7-base_geometry.txt
 
 ===============================
-The ``Integer Validator`` tests
+The ``BaseGeometry`` module
 ===============================
-
-Using ``integer_validator``
----------------------------
 
 First import ``BaseGeometry`` from the ``7-base_geometry`` module:
 
@@ -13,6 +10,19 @@ First import ``BaseGeometry`` from the ``7-base_geometry`` module:
 	>>> bg = BaseGeometry()
 
 Now use it:
+
+Using ``area``
+--------------
+
+::
+
+	>>> bg.area()
+	Traceback (most recent call last):
+	    ...
+	Exception: area() is not implemented
+
+Using ``integer_validator``
+---------------------------
 
 Numbers
 =======
@@ -24,6 +34,10 @@ Numbers
 	Traceback (most recent call last):
 	    ...
 	ValueError: width must be greater than 0
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	    ...
+	ValueError: age must be greater than 0
 
 Non-Numbers
 ===========
@@ -31,6 +45,34 @@ Non-Numbers
 ::
 
 	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	    ...
+	TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	>>> bg.integer_validator("my_int")
+	Traceback (most recent call last):
+	    ...
+	TypeError: BaseGeometry.integer_validator() missing 1 required positional arguments: 'value'
+	>>> bg.integer_validator("name", (0, ))
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
+	>>> bg.integer_validator("name", [0])
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
+	>>> bg.integer_validator("name", True)
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
+	>>> bg.integer_validator("name", {3})
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
+	>>> bg.integer_validator("name", None)
 	Traceback (most recent call last):
 	    ...
 	TypeError: name must be an integer
