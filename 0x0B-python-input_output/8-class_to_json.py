@@ -9,8 +9,6 @@ Example:
 
 """
 
-json = __import__('json')
-
 
 def class_to_json(obj):
     """creates dictionary for JSON serialization of an object.
@@ -22,4 +20,4 @@ def class_to_json(obj):
         dictionary.
 
     """
-    return json.dumps(obj.__dict__)
+    return obj.__dict__
