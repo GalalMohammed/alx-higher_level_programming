@@ -55,7 +55,7 @@ Non-Numbers
 	>>> bg.integer_validator("my_int")
 	Traceback (most recent call last):
 	    ...
-	TypeError: BaseGeometry.integer_validator() missing 1 required positional arguments: 'value'
+	TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 	>>> bg.integer_validator("name", (0, ))
 	Traceback (most recent call last):
 	    ...
