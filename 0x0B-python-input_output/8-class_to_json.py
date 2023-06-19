@@ -9,7 +9,7 @@ Example:
 
 """
 
-import json
+json = __import__('json')
 
 
 def class_to_json(obj):
@@ -19,7 +19,7 @@ def class_to_json(obj):
         obj (object): class to be converted.
 
     Returns:
-        dixtionary.
+        dictionary.
 
     """
     return json.dumps(obj.__dict__)
