@@ -13,7 +13,8 @@ First import ``MyList`` from the ``1-my_list`` module:
 	>>> my_list = MyList()
 	>>> my_list.print_sorted()
 	[]
-	>>> my_list.extend([1, 4, -2, 3, 5])
+	>>> my_list.extend([1, 4, -2, 3])
+	>>> my_list.append(5)
 
 Now use it:
 
