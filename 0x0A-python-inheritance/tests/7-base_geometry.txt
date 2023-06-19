@@ -1,0 +1,36 @@
+# 7-base_geometry.txt
+
+===============================
+The ``Integer Validator`` tests
+===============================
+
+Using ``integer_validator``
+---------------------------
+
+First import ``BaseGeometry`` from the ``7-base_geometry`` module:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+
+Now use it:
+
+Numbers
+=======
+
+::
+
+	>>> bg.integer_validator("my_int", 12)
+	>>> bg.integer_validator("width", -98)
+	Traceback (most recent call last):
+	    ...
+	ValueError: width must be greater than 0
+
+Non-Numbers
+===========
+
+::
+
+	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+	    ...
+	TypeError: name must be an integer
