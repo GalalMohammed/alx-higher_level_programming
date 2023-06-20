@@ -104,16 +104,11 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """Retunrs the rectangle with print_symbol.
+        """Retunrs the rectangle with #.
         Retunrs:
-            print_symbol rectangle.
+            # rectangle.
         """
-        if self.__height and self.__width:
-            return (str(self.print_symbol) * self.__width + "\n")\
-                   * (self.__height - 1)\
-                   + str(self.print_symbol) * self.__width
-        else:
-            return ""
+         return ('#' * self.__width + "\n") * self.__height
 
     def to_dictionary(self):
         """gets the dictionary representation.
