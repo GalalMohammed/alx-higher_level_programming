@@ -35,9 +35,9 @@ class Student(object):
             a dict.
 
         """
-        if attrs:
-            return dict([(key, self.__dict__[key])\
-                   for key in self.__dict__.keys()\
-                   if key in attrs])
+        if isinstance(attrs, list):
+            return dict([(key, self.__dict__[key])
+                        for key in self.__dict__.keys()
+                        if key in attrs])
         else:
             return self.__dict__
