@@ -108,7 +108,7 @@ class Rectangle(Base):
         Retunrs:
             # rectangle.
         """
-         return ('#' * self.__width + "\n") * self.__height
+        return ('#' * self.__width + "\n") * self.__height
 
     def to_dictionary(self):
         """gets the dictionary representation.
