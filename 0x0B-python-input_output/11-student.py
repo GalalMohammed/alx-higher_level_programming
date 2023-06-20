@@ -1,0 +1,53 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+This module defines Student class.
+
+Example:
+    students = [Student("John", "Doe", 23), Student("Bob", "Dylan", 27)]
+
+"""
+
+
+class Student(object):
+    """class defines a student."""
+
+    def __init__(self, first_name, last_name, age):
+        """__init__ method.
+
+        Args:
+            first_name (string): first name.
+            last_name (string): last name.
+            age (int): student age.
+
+        """
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self, attrs=None):
+        """retrieves a dictionary representation of a Student instance.
+
+        Args:
+            attrs (object): list of attribute names that must be retrieved.
+
+        Retunrs:
+            a dict.
+
+        """
+        if isinstance(attrs, list):
+            return dict([(key, self.__dict__[key])
+                        for key in self.__dict__.keys()
+                        if key in attrs])
+        else:
+            return self.__dict__
+
+    def reload_from_json(self, json):
+        """replaces all attributes of the Student instance.
+
+        Args:
+            json (dict): attributes.
+
+        """
+        for key in json.keys():
+            setattr(self, key, json[key])
