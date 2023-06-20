@@ -57,4 +57,4 @@ class Square(Rectangle):
             square string representation.
         """
         return f"[Square] ({self.id}) {self.__x}/{self.__y}"\
-               + f"- {self.__width}"
+               + f" - {self.__width}"
