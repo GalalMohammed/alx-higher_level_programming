@@ -40,7 +40,7 @@ class Rectangle(Base):
         self.integer_validator("width", value)
         self.size_validator("width", value)
         self.__width = value
-    
+
     @property
     def height(self):
         """:obj:`int`: rectangle height."""

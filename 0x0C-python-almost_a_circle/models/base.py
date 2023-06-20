@@ -39,7 +39,7 @@ class Base(object):
 
         Raises:
             TypeError: if value is not int.
-        
+
         """
         if not type(value) in [int]:
             raise TypeError(f"{name} must be an integer")
