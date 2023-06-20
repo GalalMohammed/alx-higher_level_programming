@@ -58,7 +58,7 @@ class Base(object):
         if value <= 0:
             raise ValueError(f"{name} must be > 0")
 
-    def position_validator(self, nama, value):
+    def position_validator(self, name, value):
         """validates position cordinate.
 
         Args:
