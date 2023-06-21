@@ -6,7 +6,7 @@ Example:
     s = Square(13)
 """
 
-Rectangle = __import__('rectangle').Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -56,5 +56,5 @@ class Square(Rectangle):
         Returns:
             square string representation.
         """
-        return f"[Square] ({self.id}) {self.__x}/{self.__y}"\
-               + f" - {self.__width}"
+        return f"[Square] ({self.id}) {self.x}/{self.y}"\
+               + f" - {self.width}"
