@@ -80,6 +80,8 @@ class Base(object):
         Returns:
             JSON string representation.
         """
+        if not list_dictionaries:
+            list_dictionaries = []
         return json.dumps(list_dictionaries)
 
     @staticmethod
