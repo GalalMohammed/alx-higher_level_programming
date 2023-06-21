@@ -2,7 +2,7 @@
 """Unittest for Rectangle
 """
 import unittest
-Rectangle = __import__('../models/Rectangle').Rectangle
+from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
