@@ -27,7 +27,7 @@ class Base(object):
         if id:
             self.id = id
         else:
-            type(self).__nb_objects += 1
+            Base.__nb_objects += 1
             self.id = type(self).__nb_objects
 
     def integer_validator(self, name, value):
