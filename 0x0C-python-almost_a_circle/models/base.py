@@ -116,7 +116,7 @@ class Base(object):
         """
         try:
             with open(f"{cls.__name__}.json") as file:
-                list_dict = json.loads(file.read())
+                list_dict = Base.from_json_string(file.read())
         except Exception:
             list_dict = []
         return [cls.create(**dic) for dic in list_dict]
