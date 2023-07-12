@@ -129,6 +129,9 @@ class Base(object):
         Returns:
             object.
         """
-        dummy = cls(1, 1)
+        if cls in [Rectangle]:
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
