@@ -100,9 +100,11 @@ class Base(object):
         Args:
             list_objs (list): list of instances.
         """
+        if not list_objs:
+            list_objs = []
         with open(f"{cls.__name__}.json", 'w') as file:
-            file.write(json.dumps(Base.to_json_string([
-                obj.to_dictionary() for obj in list_objs])))
+            file.write(Base.to_json_string([
+                obj.to_dictionary() for obj in list_objs]))
 
     @classmethod
     def load_from_file(cls):
