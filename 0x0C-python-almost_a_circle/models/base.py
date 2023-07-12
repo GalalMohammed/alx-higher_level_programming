@@ -93,7 +93,7 @@ class Base(object):
             list.
         """
         if not json_string:
-            json_string = ""
+            json_string = "[]"
         return json.loads(json_string)
 
     @classmethod
