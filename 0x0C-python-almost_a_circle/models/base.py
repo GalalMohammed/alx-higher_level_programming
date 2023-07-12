@@ -129,7 +129,7 @@ class Base(object):
         Returns:
             object.
         """
-        if cls.__name__ =  "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         else:
             dummy = cls(1)
