@@ -20,6 +20,6 @@ if __name__ == '__main__':
             ORDER BY cities.id")
     rows = cur.fetchall()
     for row in rows:
-            print(row)
+        print(row)
     cur.close()
     db.close()
