@@ -4,7 +4,7 @@
 This module lists all cities from the database hbtn_0e_4_usa.
 
 Example:
-    ./4-cities_by_state.py root root hbtn_0e_4_usa
+    $ ./4-cities_by_state.py root root hbtn_0e_4_usa
 
 """
 
