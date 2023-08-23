@@ -22,7 +22,7 @@ if __name__ == '__main__':
     Session.configure(bind=engine)
     session = Session()
     query = session.query(State).order_by(State.id)
-    for _row in (query.all()):
+    for _row in query:
         print(_row.id + ': ' + _row.name)
     session.close()
     engine.dispose()
