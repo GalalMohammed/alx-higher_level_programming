@@ -14,15 +14,13 @@ if __name__ == '__main__':
     import sys
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
-    engine = create_engine('mysql+mysqldb://{}:{}'
-                           '@localhost/{}'.format(sys.argv[1], sys.argv[2],
-                                                  sys.argv[3]),
-                           pool_pre_ping=True)
-    Session = sessionmaker()
-    Session.configure(bind=engine)
+    import urllib.parse
+    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}".format(
+                           sys.argv[1], urllib.parse.quote_plus(sys.argv[2]),
+                           sys.argv[3]))
+    Session = sessionmaker(bind=engine)
     session = Session()
-    query = session.query(State).order_by(State.id)
-    for _row in query:
-        print(_row.id + ': ' + _row.name)
+    for row in session.query(State).order_by(State.id):
+        print(str(row.id) + ': ' + row.name)
     session.close()
     engine.dispose()
