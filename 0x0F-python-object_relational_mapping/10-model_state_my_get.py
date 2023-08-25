@@ -20,7 +20,10 @@ if __name__ == '__main__':
                            sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    for row in session.query(State).filter(State.name == sys.argv[4]):
+    row = session.query(State).filter(State.name == sys.argv[4]).first()
+    if row:
         print(row.id)
+    else:
+        print("Not found")
     session.close()
     engine.dispose()
