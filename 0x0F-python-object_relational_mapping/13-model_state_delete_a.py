@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
-This module adds State object “Louisiana” to hbtn_0e_6_usa
+This module deletes State objects with a name containing letter a
+from hbtn_0e_6_usa
 
 Example:
-    $ ./11-model_state_insert.py root root hbtn_0e_6_usa
+    $ ./13-model_state_delete_a.py root root hbtn_0e_6_usa
 
 """
 
