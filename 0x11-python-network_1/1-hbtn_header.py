@@ -6,7 +6,7 @@ and displays the value of the X-Request-Id variable
 found in the header of the response.
 
 Example:
-    $ ./1-hbtn_header.py
+    $ ./1-hbtn_header.py https://alx-intranet.hbtn.io
 
 """
 
