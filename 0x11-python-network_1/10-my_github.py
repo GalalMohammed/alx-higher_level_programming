@@ -20,4 +20,4 @@ if __name__ == '__main__':
             'X-GitHub-Api-Version': '2022-11-28'
             }
     r = requests.get(url, headers=headers)
-    print(r.json()['id'])
+    print(r.json().get('id'))
