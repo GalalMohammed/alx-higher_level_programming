@@ -19,6 +19,6 @@ if __name__ == "__main__":
         payload = {'q': ""}
     r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
     if r.json():
-        print(f"[{r.json()[id]}] {r.json()[name]}")
+        print(f"[{r.json()['id']}] {r.json()['name']}")
     else:
         print("No result")
