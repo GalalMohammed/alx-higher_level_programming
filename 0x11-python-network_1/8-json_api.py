@@ -18,7 +18,9 @@ if __name__ == "__main__":
     else:
         payload = {'q': ""}
     r = requests.post('http://0.0.0.0:5000/search_user', data=payload)
-    if r.json():
+    if r.status_code != requests.codes.ok:
+        print("Not a valid JSON")
+    elif r.json():
         print(f"[{r.json()['id']}] {r.json()['name']}")
     else:
         print("No result")
